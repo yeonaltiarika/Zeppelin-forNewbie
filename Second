@@ -1,0 +1,18 @@
+%sql 
+select age, count(1) value 
+from bank 
+where age < ${maxAge=30} 
+group by age 
+order by age
+
+%sql
+select age, count(1) value 
+from bank 
+where marital="${marital=single,single|divorced|married}" 
+group by age
+
+%sql
+select age, count(1) value 
+from bank 
+where marital="${marital=single,single|divorced|married}" 
+group by age
